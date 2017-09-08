@@ -1,0 +1,53 @@
+.c-switch-button{
+    min-width: 50px;
+    height: 26px;
+    line-height:26px;
+    padding: 0 6px;
+    box-sizing: border-box;
+    border-radius: 12px;
+    position: relative;
+    background: #d9d9d9;
+    transition: background 300ms ease-out,border-color 300ms;
+    border-color: #d9d9d9;
+    font-size: 12px;
+}
+.c-switch-button.c-button--press{
+    box-shadow: none;
+    transform:none;
+}
+
+.c-switch-button.disabled{
+    border-color: #f7f7f7;
+}
+
+.c-switch-button:after{
+    position: absolute;
+    top:0;
+    left:24px;
+    content:'';
+    display: block;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: #fff;
+    transition: left 300ms ease-out;
+    transform: translateX(-100%);
+}
+.c-switch-button--open{
+    background: #4242ff;
+    border-color: #4242ff;
+}
+.c-switch-button--open:after{
+    left:100%;
+}
+
+.c-switch-button__text-open{
+    color:#fff;
+    padding-right: 24px;
+}
+
+.c-switch-button__text-close{
+    color:#333;
+    float: right;
+    padding-left: 24px;
+}

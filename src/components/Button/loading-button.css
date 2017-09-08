@@ -1,0 +1,8 @@
+.c-loading-button{
+    position: relative;
+}
+
+.c-loading-button--loading .c-loading-button__text{
+    opacity: 0;
+    margin-right: 30px;
+}

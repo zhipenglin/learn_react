@@ -1,0 +1,58 @@
+.c-button{
+    border: solid 1px #d9d9d9;
+    color: rgba(0,0,0,.65);
+    padding: 3px 8px;
+    cursor: pointer;
+    display: inline-block;
+    transition: transform 200ms,color 300ms,background 300ms,border-color 300ms,box-shadow 500ms;
+    border-radius: 5px;
+    user-select: none;
+    font-size: 14px;
+    text-align: center;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    /*max-width: 200px;*/
+}
+
+.c-button.primary{
+    background: #4242ff;
+    color:#fff;
+    border-color:#4242ff;
+}
+
+.c-button.dashed{
+    border-style: dashed;
+}
+
+.c-button.danger{
+    color: #f04134;
+    background-color: #f7f7f7;
+}
+
+.c-button.disabled{
+    color: rgba(0,0,0,.25);
+    background-color: #f7f7f7;
+    border-color: #d9d9d9;
+    cursor: not-allowed;
+}
+
+.c-button--hover{
+    border-color:#4242ff;
+    color:#4242ff;
+}
+.c-button--hover.primary{
+    background: #7373ff;
+    border-color:#7373ff;
+}
+.c-button--hover.danger{
+    background: #f04134;
+    border-color:#f04134;
+    color:#fff;
+}
+
+.c-button--press{
+    box-shadow: 0 0 5px rgba(66,66,255,0.3) inset;
+    transform: translateY(1px) scale(0.99);
+}
+.c-button--press.primary,.c-button--press.danger{
+    box-shadow: 0 0 10px rgba(0,0,0,0.3) inset;
+}

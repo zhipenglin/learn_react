@@ -1,0 +1,52 @@
+.c-field-decorator {
+    margin: 10px auto;
+    width: 500px;
+}
+
+.c-field-decorator__label {
+    width: 80px;
+    text-align: right;
+    margin-right: 10px;
+    color: #666;
+}
+
+.c-field-decorator__inner {
+    display: flex;
+    align-items: center;
+}
+
+.c-field-decorator__main {
+    flex: 1;
+    position: relative;
+}
+
+.c-field-decorator__field{
+    height: 30px;
+    width: calc(100% - 40px);
+    padding: 5px 10px;
+    box-sizing: border-box;
+    outline: none;
+    border-radius: 4px;
+    border: solid 1px #ccc;
+    transition:border-color 300ms;
+}
+
+.c-field-decorator__field--error{
+    border-color:red;
+}
+
+.c-field-decorator__msg {
+    padding-left: 90px;
+    font-size: 12px;
+    color: red;
+    margin-top: 4px;
+}
+
+.c-field-decorator__pass {
+    display: inline-block;
+    vertical-align: middle;
+    margin: -2px 0 0 10px;
+    width: 20px;
+    height: 20px;
+    background: url('./pass.svg') 100% / 100%;
+}

@@ -1,0 +1,75 @@
+.c-loading {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.3);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color:#333;
+    font-size: 14px;
+    cursor: wait;
+    user-select: none;
+}
+
+.c-loading__text{
+    position: relative;
+    white-space:nowrap; overflow:hidden; text-overflow:ellipsis;
+    max-width: calc(80% - 20px);
+}
+
+@keyframes loading {
+    from{
+        transform: rotate(0);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
+.c-loading__progress{
+    display: block;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    transition: transform 100ms,height 100ms;
+    transform-origin: 50% 100%;
+}
+
+.c-loading__wave{
+    display: block;
+    width: 400%;
+    height: 100%;
+    background: url("./wave.svg") repeat-x 100% / auto;
+    overflow: hidden;
+    animation: waveSvgAnim 4s linear both infinite;
+}
+
+.c-loading:after{
+    content:'';
+    display: block;
+    margin-left: 2px;
+    background: url('./loading.svg') 100% / 100%;
+    width: 20px;
+    height: 20px;
+    animation: loading 1s steps(12) infinite;
+}
+
+.c-loading--dark{
+    background: rgba(0, 0, 0, 0.3);
+    color:#fff;
+}
+
+@keyframes waveSvgAnim {
+    0% {
+        transform: translateX(-75%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
