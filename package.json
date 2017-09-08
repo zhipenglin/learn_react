@@ -14,7 +14,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "deploy": "build-storybook&&gh-pages -d build -r https://github.com/zhipenglin/learn_react.git",
+    "deploy": "gh-pages -d storybook-static -r https://github.com/zhipenglin/learn_react.git",
     "precommit": "lint-staged",
     "test": "react-scripts test --env=jsdom",
     "eject": "react-scripts eject",
